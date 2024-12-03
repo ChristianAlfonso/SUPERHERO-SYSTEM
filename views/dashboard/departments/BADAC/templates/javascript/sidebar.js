@@ -19,7 +19,6 @@ if (header) {
                         <div class="sidebar-submenu-item dashboard">Dashboard</div>
                         <div class="sidebar-submenu-item badac-form">Form</div>
                         <div class="sidebar-submenu-item badac-notify">Notification</div>
-                        <div class="sidebar-submenu-item gov-contact">Contact</div>
                   </div>
                </div>
                <div class="sidebar-category">
