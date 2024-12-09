@@ -16,12 +16,20 @@ if (header) {
                     <div class="sidebar-submenu-show">
                         <div class="sidebar-submenu-item main">Home</div>
                         <div class="sidebar-submenu-item dashboard">Dashboard</div>
-                        <div class="sidebar-submenu-item forms">Forms</div>
                         <div class="sidebar-submenu-item notify">Notifications</div>
                         <div class="sidebar-submenu-item contacts">Contacts</div>
-                        <div class="sidebar-submenu-item gov-contact">Programs and Services</div>
+                        
                     </div>
-
+                </div>
+                <div class="sidebar-category">
+                    <div class="sidebar-category-header">
+                        <span><i class="fas fa-child category-icon"></i>Violence Against Women and Children</span>
+                        <i class="fas fa-chevron-down toggle-icon"></i>
+                    </div>
+                    <div class="sidebar-submenu-show">
+                        <div class="sidebar-submenu-item vawc-case-record">Case Records</div>
+                        <div class="sidebar-submenu-item ">Services</div>
+                    </div>
                 </div>
                 <div class="sidebar-category">
                     <div class="sidebar-category-header" data-bs-toggle="modal" data-bs-target="#signOutModal">
@@ -31,6 +39,8 @@ if (header) {
             </div>
         </nav>
     `;
+
+    // <div class="sidebar-submenu-item gov-contact">Programs and Services</div>
 
     const sidebarContent = document.querySelector('.sidebar-content');
     const ps = new PerfectScrollbar(sidebarContent);

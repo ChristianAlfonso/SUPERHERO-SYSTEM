@@ -29,19 +29,19 @@
     <meta name="twitter:image" content="URL_to_your_image.jpg">
     <meta name="twitter:url" content="https://yourwebsite.com">
     <style>
-        .record-item {
+        .record-ordinance {
             cursor: pointer;
             transition: all 0.3s ease;
             background-color: #ffffff;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
-        .record-item:hover {
+        .record-ordinance:hover {
             transform: translateY(-5px);
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
         }
 
-        .record-item.selected {
+        .record-ordinance.selected {
             background-color: #007bff;
             color: white;
         }
@@ -56,175 +56,45 @@
 <body>
     <div id="app">
         <header class="header">
-
         </header>
-
         <div class="main-content">
             <div class="welcome-message">
                 <h2 class="text-danger">City Ordinances</h2>
-                <p>This contains the streamlined processing made by other departments.</p>
             </div>
 
-            <div class="city-ordinance-action d-flex justify-content-end align-items-center" style="gap: 5px">
-                <div class="sort>
-                    <label for="">Sort by:</label>
-                    <input type="text">
-                </div>
-            2<div class="search">
-               p-2      <label for="">Search:</label>
-                    <input type="text">p            </div>
-            </div>
-
+          
             <div class="city-ordinance-page shadow bg-light rounded-3 py-5 px-4 container-fluid">
+                <div class="search">
+                  <button class = "btn btn-primary" data-bs-toggle = "modal" data-bs-target = "#searchModal">Search Ordinance</button>       
+                </div>
                 <div class="city-ordinance-header d-flex justify-content-end align-items-center">
-                    <button class="btn text-light" style="background-color: #FF5D5D;">Add ordinance</button>
+                    <label for="ordinanceNumber">Select from what Council: </label>
+                    <select name="ordinanceNumber" id="ordinanceNumber">
+                     <option value="" selected disabled><--- SELECT ---> </option>    
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="pre-war">pre-war</option>
+                    </select>
                 </div>
-                <div class="city-ordinance-body row row-cols-sm-2">
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col p-2">
-                        <div class="city-ordinance-card p-3 border">
-                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
-                                <p>Approved No:  SP-2501, S-2016 </h5>
-                                <p>1/13/2022</p>
-                            </div>
-                            <div class="city-ordinance-body pb-5">
-                                <p>Proposed No:  PO 19CC-594</p>
-                            </div>
-                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
-                                <p>Author: ALEXIS R. HERRERA</p>
-                                <button type="button" class="btn text-light" style="background-color: #FF5D5D;"
-                                data-bs-toggle="modal"
-                                data-bs-target="#cityOrdinanceDetails">See Details</button>
-                            </div>
-                        </div>
-                    </div>
+                <div class="city-ordinance-body row row-cols-sm-2">       
                 </div>
-
             </div>
 
 
     <!-- City Ordinance Details modal -->
-     <div class="modal" id="cityOrdinanceDetails">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content" style="border: 1px solid red;">
-                <div class="modal-header" style="background-color: #FFE6E2;">
-                    <h5>Add ordinance</h5>
-                    <button class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    <form action="">
-                        <div class="form-group mt-2">
-                            <label for="">Author:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="">Approved No:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="">Proposed No:</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="">Url</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-2">
-                            <label for="">Submitted</label>
-                            <input type="text" class="form-control">
-                        </div>
-                        <div class="form-group mt-2 d-flex justify-content-end">
-                            <button type="button" class="btn px-5 text-light" style="background-color:#FF5D5D;">Add</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-     </div>
+
 
            
         </div>
@@ -250,6 +120,47 @@
             </div>
         </div>
 
+        <!--- Search Modal --->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="serachModal" aria-hidden="true" data-bs-backdrop="static" data-bs-keyboard="false">
+            <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- Added modal-dialog-centered here -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="searchOrdinancemodalTitle">Search Ordinance</h5>
+                        <button class = "btn-close" data-bs-dismiss = "modal"></button>
+                    </div>
+                    <div class="modal-body">
+                         <div class="form-group">
+                            <label for="query">Search: </label>
+                        <input type="text" name = "query" id = "query" class = "form-control">
+                        <label for="ordinanceNumberModal">Select from what ordinance:</label>
+                        <select name="ordinanceNumberModal" class = "mt-3 form-control mb-3" id="ordinanceNumberModal">
+                            <option value="9" >9</option>
+                            <option value="10">10</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="16">16</option>
+                            <option value="17">17</option>
+                            <option value="18">18</option>
+                            <option value="19">19</option>
+                            <option value="20">20</option>
+                            <option value="21">21</option>
+                            <option value="22">22</option>
+                            <option value="pre-war">pre-war</option>
+
+                        </select>
+                         </div>
+                        <button class = "btn btn-primary" id="submitSearch">Submit</button>
+                    </div>
+                    <div class="cityOrdinaceBodyModal row row-cols-sm-2">
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/perfect-scrollbar@1.5.0/dist/perfect-scrollbar.min.js"></script>
@@ -259,5 +170,139 @@
     <!-- <script src="../../../user_data.js"></script> -->
     <script src="../../../diff-sidebar.js" type="module"></script>
 </body>
+<script>
+    const selectOrdinance =document.querySelector('#ordinanceNumber');
+    const ordinanceBody = document.querySelector('.city-ordinance-body');
+    const search = document.querySelector('#submitSearch');
+    const ordinanceBodyModal = document.querySelector('.cityOrdinaceBodyModal');
+    const searchModal = document.querySelector('#searchModal');
+    let limit = 6;
+    let offset = 6;
+    let isModalOpen = false
+     searchModal.addEventListener('show.bs.modal', () => {
+        isModalOpen = true;
+    });
 
+    searchModal.addEventListener('hide.bs.modal', () => {
+        isModalOpen = false;
+        window.location.reload();
+    });
+    search.addEventListener('click',  () => {
+       const query = document.querySelector('#query').value;
+       const ordinanceNumberModal = document.querySelector('#ordinanceNumberModal').value;
+         getSearchData(query, ordinanceNumberModal );    
+    });
+    document.querySelector('.btn-close').addEventListener('click', () => {
+        console.log('modal closed');
+    });
+        selectOrdinance.addEventListener('change', (e) => {
+        getNewOrdinanceData(e.target.value, limit);
+    });
+  
+     const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                offset += 6;
+                getNextOrdinanceData(selectOrdinance.value ? selectOrdinance.value : 9, limit, offset);
+                
+            }
+            
+        });
+    }, {
+        threshold: 1,
+        rootMargin:'100px'
+    });
+
+    
+    // get new ordinance i.e from another council
+    const getNewOrdinanceData = async (number, limit) =>{
+      ordinanceBody.innerHTML = '';
+       try{
+        const response = await fetch(`./get_ordinance_controller.php?number=${number}&limit=${limit}`);
+        const data = await response.json();
+        data.slice(0, limit).forEach(ordinance => {
+            ordinanceBody.innerHTML += `
+            <div class="col p-2">
+                        <div class="city-ordinance-card p-3 m-3 shadow rounded-3" >
+                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
+                                <p>Approved No: <a href = "${ordinance.href}" target = _blank  class = "ordinance-link" =${ordinance.href}>${ordinance.link}</a> </h5>
+                            </div>
+                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
+                            <p class = "ordinance-title">Title: ${ordinance.title ?? "no title"} </p>
+                            
+                            </div>
+                            <p class = "ordinance-author">Author: ${ordinance.author ?? "no author"}</p>
+                        </div>
+                    </div>
+            `    
+        });
+        const cards = document.querySelectorAll('.city-ordinance-card');
+        const lastCard = cards[cards.length - 1];
+        observer.observe(lastCard);
+    }
+    
+         catch(error){
+              console.log(error);
+         }
+    }
+//get the next ordinance data
+   const getNextOrdinanceData = async (number, limit,offset) => {
+         try{
+        const response = await fetch(`./get_ordinance_controller.php?number=${number}&limit=${limit}&offset=${offset}`);
+        const data = await response.json();
+        data.slice(0, limit).forEach(ordinance => {
+            ordinanceBody.innerHTML += `
+            <div class="col p-2">
+                        <div class="city-ordinance-card  p-3 m-3 shadow rounded-3" >
+                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
+                                <p>Approved No: <a href = "${ordinance.href}" target = _blank  class = "ordinance-link">${ordinance.link}</a> </h5>
+                            </div>
+                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
+                            <p class = "ordinance-title">Title: ${ordinance.title ?? "no title"} </p>
+                            
+                            </div>
+                            <p class = "ordinance-author">Author: ${ordinance.author ?? "no author"}</p>
+                        </div>
+                    </div>
+                    
+            `
+        });
+        const cards = document.querySelectorAll('.city-ordinance-card');
+        const lastCard = cards[cards.length - 1];
+        observer.observe(lastCard);
+    }
+         catch(error){
+              console.log(error);
+         }finally{
+         }
+    }
+const getSearchData = async(query, number) =>{
+    try {
+        ordinanceBodyModal.innerHTML = '';
+        const response = await fetch(`./search_ordinance_controller.php?query=${query}&ordinanceNumberModal=${number}`);
+        const data = await response.json();
+        const ordinance =data['data'];
+        ordinance.forEach(ordinance => {
+            ordinanceBodyModal.innerHTML += `
+            <div class="container-fluid  vw-100">
+                        <div class="city-ordinance-card vw-75 p-3 m-3 shadow rounded-3">
+                            <div class="city-ordinance-header d-flex justify-content-between align-items-center">
+                                <p>Approved No: <a href = "${ordinance.href}" target = _blank  class = "ordinance-link">${ordinance.link}</a> </h5>
+                            </div>
+                            <div class="city-ordinance-footer d-flex justify-content-between align-items-center">
+                            <p class = "ordinance-title">Title: ${ordinance.title ?? "no title"} </p>
+                            
+                            </div>
+                            <p class = "ordinance-author">Author: ${ordinance.author ?? "no author"}</p>
+                        </div>
+                        </div>
+            `
+        })
+    }catch(error){
+        console.log(error);
+    }
+
+}
+
+</script>
 </html>

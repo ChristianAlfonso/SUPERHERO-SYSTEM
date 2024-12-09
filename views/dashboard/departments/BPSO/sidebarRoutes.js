@@ -11,6 +11,14 @@ export const sidebarRoutes = [
     { className: "vehicle-dispatch", path: "/views/dashboard/departments/BPSO/Vehicle%20Dispatchment/vehicle.php"},
     { className: "bpso-notify", path:"/views/dashboard/departments/BPSO/Notification/notification.php"}
 
+
+    // { className: "main", path: `${baseUrl}${currentPath}/dashboard.php` },
+    // { className: "complaint-section", path: `${baseUrl}${currentPath}/complaints.php` },
+    // { className: "new-complaint", path: `${baseUrl}${currentPath}/newcomplaint.php` },
+    // { className: "create-report", path: `${baseUrl}${currentPath}/report.php` },
+    // { className: "team-schedule", path: `${baseUrl}${currentPath}/teamschedule.php` },
+    // { className: "vehicle-dispatch", path: `${baseUrl}${currentPath}/vehicle.php`},
+    // { className: "bpso-notify", path:`${baseUrl}${currentPath}/notification.php`}
     // LUPON Things
 
 
